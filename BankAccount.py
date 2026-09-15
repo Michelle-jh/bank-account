@@ -8,9 +8,8 @@ class BankAccount:
         self.current_balance = current_balance
         self.minimum_balance = minimum_balance
 
-        self.account_num = account_num
-        self.routing_num = routing_num
-
+        self._account_num = account_num
+        self.__routing_num = routing_num
     # methods
     def deposit(self, amount):
         self.current_balance += amount
@@ -24,10 +23,14 @@ class BankAccount:
             self.current_balance -= amount
             print(f"Withdrew ${amount:.2f}\nNew Balance: ${self.current_balance:.2f}")
     #method for customer information
+    def get_routing_num(self):
+        return self.__routing_num
+
     def print_customer_information(self):
         print("")
         print(f"Bank Name: {self.bank_title}")
         print(f"Customer Name: {self.customer_name}")
+        print(f"Account Number: {self._account_num}")
         print(f"Current Balance: {self.current_balance:.2f}")
         print(f"Minimum Balance: {self.minimum_balance:.2f}")
 
