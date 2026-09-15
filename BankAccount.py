@@ -18,7 +18,7 @@ class BankAccount:
     def withdraw(self, amount):
         #error validation
         if self.current_balance - amount < self.minimum_balance:
-            print("USER IS UNABLE TO WITHDRAW BECAUSE IS BALANCE LESS THAN MINIMUM BALANCE")
+            print("USER IS UNABLE TO WITHDRAW BECAUSE BALANCE IS LESS THAN MINIMUM BALANCE")
         else:
             self.current_balance -= amount
             print(f"Withdrew ${amount:.2f}\nNew Balance: ${self.current_balance:.2f}")
@@ -35,14 +35,14 @@ class BankAccount:
         print(f"Minimum Balance: {self.minimum_balance:.2f}")
 
     #2 instances
-acc1 = BankAccount("Michelle Jhonson", 500, 50)
-acc1.deposit(100)
-acc1.withdraw(50)
-acc1.print_customer_information()
-
-print("")
-
-acc2 = BankAccount("Michael Anderson",200, 100)
-acc2.deposit(50)
-acc2.withdraw(200)
-acc2.print_customer_information()
+# acc1 = BankAccount("Michelle Jhonson", 500, 50)
+# acc1.deposit(100)
+# acc1.withdraw(50)
+# acc1.print_customer_information()
+#
+# print("")
+#
+# acc2 = BankAccount("Michael Anderson",200, 100)
+# acc2.deposit(50)
+# acc2.withdraw(200)
+# acc2.print_customer_information()
