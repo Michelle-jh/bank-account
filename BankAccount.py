@@ -3,10 +3,13 @@ class BankAccount:
     bank_title = "Python Bank"
 
     #construct method
-    def __init__(self,customer_name, current_balance, minimum_balance):
+    def __init__(self,customer_name, current_balance, minimum_balance, account_num, routing_num):
         self.customer_name = customer_name
         self.current_balance = current_balance
         self.minimum_balance = minimum_balance
+
+        self.account_num = account_num
+        self.routing_num = routing_num
 
     # methods
     def deposit(self, amount):
